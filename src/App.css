@@ -37,6 +37,13 @@ html {
 .homepage__navWraper {
   position: relative;
   flex: 0.2;
+  
+  border-right: 0.3px;
+  border-left: 0;
+  border-top: 0;
+  border-bottom: 0;
+  border-color: grey;
+  border-style: solid;
 }
 
 .homepage__timeline {
