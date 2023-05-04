@@ -37,7 +37,7 @@ function Post({ user, postImage, likes, timestamp, caption }) {
                {likes.toLocaleString('en-US')} likes
             </div>
             <div>
-               <b>{user}</b><span>{caption}</span>
+               <span className="post__caption_user">{user}</span> <span>{caption}</span>
             </div>
          </div>
       </div>

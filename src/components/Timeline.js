@@ -49,6 +49,7 @@ function Timeline() {
                      postImage={post.postImage}
                      likes={post.likes}
                      timestamp={post.timestamp}
+                     caption={post.caption}
                   />
                ))}
             </div>

@@ -44,3 +44,8 @@
 .postIcon :hover {
    cursor: pointer;
 }
+
+.post__caption_user{
+   /* margin-right: 0.3em; */
+   font-weight: bold;
+}
