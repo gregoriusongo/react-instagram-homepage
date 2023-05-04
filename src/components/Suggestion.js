@@ -6,11 +6,13 @@ function Suggestion() {
    return (
       <div className="suggestions">
          <div className="profile">
-            <Avatar>
+            <Avatar className="profile__avatar">
                U
             </Avatar>
-            <div>Username</div>
-            <div>User Full Name</div>
+            <div className="profile__user">
+               <span className="profile__username">Username</span>
+               <div className="profile__fullname">User Full Name</div>
+            </div>
             <button className="switch__button">Switch</button>
          </div>
          <div className="suggestions__title">Suggested for you

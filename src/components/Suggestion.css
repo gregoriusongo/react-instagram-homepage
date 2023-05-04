@@ -4,7 +4,26 @@
 }
 
 .profile{
-   
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 1em;
+}
+
+.profile__avatar{
+   margin-right: 0.6em;
+}
+
+.profile__user{
+   flex:1;
+}
+
+.profile__username{
+   font-size: 0.7em;
+}
+
+.profile__fullname{
+   font-size: 0.7em;
+   color: grey;
 }
 
 .switch__button {
@@ -14,6 +33,7 @@
    background: 0;
    border: 0;
    padding: 0;
+   float: right;
 }
 
 .suggestions__title {
