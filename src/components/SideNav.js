@@ -54,7 +54,7 @@ function Sidenav() {
                   U
                </Avatar>
                <span>
-                  Username 
+                  Profile 
                </span>
             </button>
          </div>
