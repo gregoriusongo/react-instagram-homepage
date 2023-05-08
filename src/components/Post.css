@@ -49,3 +49,15 @@
    /* margin-right: 0.3em; */
    font-weight: bold;
 }
+
+.post__view_all_comment{
+   color: grey;
+   margin-top: 0.5em;
+   margin-bottom: 0.5em;
+}
+
+.post__add_comment{
+   color:darkgrey;
+   margin-top: 0.5em;
+   margin-bottom: 0.5em;
+}

@@ -7,7 +7,7 @@ import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 
-function Post({ user, postImage, likes, timestamp, caption }) {
+function Post({ user, postImage, likes, timestamp, caption, comment, totalComment }) {
    return (
       <div className="post">
          <div className="post__header">
@@ -39,6 +39,26 @@ function Post({ user, postImage, likes, timestamp, caption }) {
             <div>
                <span className="post__caption_user">{user}</span> <span>{caption}</span>
             </div>
+            {
+               totalComment > 2 ? (
+                  <div className="post__view_all_comment">
+                     View all {totalComment} comments
+                  </div>
+               ) : null
+            }
+            {
+               comment !== undefined ? (
+                  comment.map((item, index) => (
+                     <div>
+                        <span className="post__caption_user">{item.user}</span> <span>{item.comment}</span>
+                     </div>
+                  ))
+               ) : (null)
+            }
+            <div className="post__add_comment">
+               Add a comment...
+            </div>
+            <hr/>
          </div>
       </div>
    );

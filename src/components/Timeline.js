@@ -12,6 +12,11 @@ function Timeline() {
          likes: 5,
          timestamp: "2d",
          caption: "lorem ipsum",
+         totalComment: 20,
+         comment:[
+            {user:"friend1", comment:"comment from friend.."},
+            {user:"friend1", comment:"comment from friend.."},
+         ],
       },
       {
          user: "user2",
@@ -20,6 +25,11 @@ function Timeline() {
          likes: 100,
          timestamp: "2d",
          caption: "lorem ipsum",
+         totalComment: 2,
+         comment:[
+            {user:"friend1", comment:"comment from friend.."},
+            {user:"friend1", comment:"comment from friend.."},
+         ],
       },
       {
          user: "user3",
@@ -28,6 +38,11 @@ function Timeline() {
          likes: 2000,
          timestamp: "2d",
          caption: "lorem ipsum",
+         totalComment: 1200,
+         comment:[
+            {user:"friend1", comment:"comment from friend.."},
+            {user:"friend1", comment:"comment from friend.."},
+         ],
       },
       {
          user: "user4",
@@ -36,6 +51,11 @@ function Timeline() {
          likes: 534,
          timestamp: "2d",
          caption: "lorem ipsum",
+         totalComment: 100,
+         comment:[
+            {user:"friend1", comment:"comment from friend.."},
+            {user:"friend1", comment:"comment from friend.."},
+         ],
       },
    ]);
 
@@ -50,6 +70,8 @@ function Timeline() {
                      likes={post.likes}
                      timestamp={post.timestamp}
                      caption={post.caption}
+                     comment={post.comment ?? []}
+                     totalComment={post.totalComment}
                   />
                ))}
             </div>
