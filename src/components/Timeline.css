@@ -5,6 +5,14 @@
 
 .timeline__left {
    flex: 0.7;
+   padding-top: 2em;
+   padding-left: 2em;
+   padding-right: 2em;
+}
+
+.timeline__story{
+   display: flex;
+   flex-direction: row;
 }
 
 .timeline__right {
