@@ -3,8 +3,13 @@ import Post from "./Post";
 import "./Timeline.css";
 import Suggestion from "./Suggestion";
 import Story from "./Story";
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 function Timeline() {
+   const isBigScreen = useMediaQuery('(min-width: 1180px)');
+   // const matches = useMediaQuery('(min-width:600px)');
+   // console.log(isSmallScreen);
+
    useEffect(() => {
       fetch('https://private-95a3ce-gregorius1.apiary-mock.com/instagrams')
          .then(response => response.json())
@@ -114,9 +119,13 @@ function Timeline() {
                ))}
             </div>
          </div>
-         <div className="timeline__right">
-            <Suggestion />
-         </div>
+         {
+            isBigScreen ? (
+               <div className="timeline__right">
+                  <Suggestion />
+               </div>      
+            ) : null
+         }
       </div>
    );
 }

@@ -8,60 +8,75 @@ import ChatIcon from "@mui/icons-material/Chat";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Avatar } from "@mui/material";
+import { Avatar, useMediaQuery } from "@mui/material";
 import logo from "../assets/logo.png";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 function Sidenav() {
+   const isBigScreen = useMediaQuery('(min-width: 1280px)');
+
    return (
       <div className="sidenav">
-         <img
+         {
+            isBigScreen ?
+            <img
             className="sidenav__logo"
             src={logo}
             alt="Instagram Logo"
-         />
+            />
+            : <div className="sidenav__logo">
+
+            <InstagramIcon />
+            </div>
+         }
 
          <div className="sidenav__buttons">
             <button className="sidenav__button">
                <HomeIcon />
-               <span>Home</span>
+               {isBigScreen ? <span>Home</span> : null}
             </button>
             <button className="sidenav__button">
                <SearchIcon />
-               <span>Search</span>
+               {isBigScreen ? <span>Search</span> : null}
             </button>
             <button className="sidenav__button">
                <ExploreIcon />
-               <span>Explore</span>
+               {isBigScreen ? <span>Explore</span> : null}
             </button>
             <button className="sidenav__button">
                <SlideshowIcon />
-               <span>Reels</span>
+               {isBigScreen ? <span>Reels</span> : null}
             </button>
             <button className="sidenav__button">
                <ChatIcon />
-               <span>Messages</span>
+               {isBigScreen ? <span>Messages</span> : null}
             </button>
             <button className="sidenav__button">
                <FavoriteBorderIcon />
-               <span>Notifications</span>
+               {isBigScreen ? <span>Notifications</span> : null}
             </button>
             <button className="sidenav__button">
                <AddCircleOutlineIcon />
-               <span>Create</span>
+               {isBigScreen ? <span>Create</span> : null}
             </button>
             <button className="sidenav__button">
                <Avatar>
                   U
                </Avatar>
-               <span>
-                  Profile 
-               </span>
+               {isBigScreen ?
+                  <span>
+                     Profile
+                  </span>
+                  : null}
             </button>
          </div>
          <div className="sidenav__more">
             <button className="sidenav__button">
                <MenuIcon />
-               <span className="sidenav__buttonText">More</span>
+               {isBigScreen ?
+                  <span className="sidenav__buttonText">More</span>
+                  : null
+               }
             </button>
          </div>
       </div>
